@@ -1,0 +1,29 @@
+<h1 class="title">Todo List</h1>
+<div class="container ">
+    <form id="task-form" class="add-task">
+        <div class="input-field">
+            <input type="text" #item class="task input" id="task" placeholder="new task.." autocomplete="off"
+                onfocus="this.placeholder = '' " onblur="this.placeholder = 'new task..'" />
+        </div>
+        <div @fade class="add-task-btn left">
+            <input class="btn btn-outline-success" (click)="addItem(item)" value="add">
+        </div>
+    </form>
+    <div class="edit-task">
+        <div class="my-tasks">
+            <div class="center">
+                <h5> Tasks Added <i class="fas fa-check-circle"></i></h5>
+                <div class="input-field">
+                    <input type="text" class="filter input center" id="filter">
+                </div>
+
+                <ul *ngIf="items" class="list-group">
+                    <li @fade class="list-group-item" *ngFor='let item of items'>
+                        {{item}}
+                        <button class="btn btn-outline-danger" (click)="removeItem(item)">Remove</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

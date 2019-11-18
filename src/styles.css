@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+    background-image: url(.\assets\imgs\taskList-bg-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+  
+}
